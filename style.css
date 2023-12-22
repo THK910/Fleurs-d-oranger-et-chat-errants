@@ -1,3 +1,12 @@
-body {
-  background-color: red;
+/*
+SASS ETAPE 1 EFFET FADE IN
+*/
+.fade-in-top {
+  animation: fade-in 2s linear;
+  animation-direction: top;
+}
+
+.fade-in-bottom {
+  animation: fade-in 2s linear;
+  animation-direction: bottom;
 }/*# sourceMappingURL=style.css.map */

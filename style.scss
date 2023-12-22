@@ -1,3 +1,23 @@
-body {
-    background-color: red;
-}
+/*
+SASS ETAPE 1 EFFET FADE IN
+*/
+
+@mixin fade-in-bottom($duration, $timing-function) {
+    animation: fade-in $duration $timing-function;
+    animation-direction: bottom;
+  }
+ 
+  
+@mixin fade-in-top($duration, $timing-function) {
+    animation: fade-in $duration $timing-function;
+    animation-direction: top;
+  }
+  
+.fade-in-top {
+@include fade-in-top(2s, linear);
+  }
+ 
+.fade-in-bottom {
+@include fade-in-bottom(2s, linear);
+  }
+    

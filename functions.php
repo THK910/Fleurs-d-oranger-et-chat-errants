@@ -19,8 +19,14 @@ if ( get_stylesheet() !== get_template() ) {
 
 function ajouter_script_personnalise() {
     // Enqueue du script
-    wp_enqueue_script('custom-script', get_template_directory_uri() . '/script.js', array(), null, true);
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/script.js', array(), null, true);
 }
 
 // Action pour ajouter le script dans la queue des scripts
 add_action('wp_enqueue_scripts', 'ajouter_script_personnalise');
+
+
+function theme_scripts() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'theme_scripts');
